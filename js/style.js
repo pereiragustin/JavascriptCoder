@@ -2,7 +2,7 @@
 
 // Pedimos nombre de ingreso.
 
-let nombre = prompt("Ingresa tu nombre");
+let nombre = prompt("Ingresa tu nombre");;
 
 if (nombre.trim() == "") {
     alert("no ingresaste nombre de usuario");
@@ -46,6 +46,89 @@ if (opciones == 1) {
 } else if (opciones == 3) {
     alert("Bienvenid@ a la Seccion Jardineria");
 }
+
+
+
+// Productos  y carrito
+//Mostramos los productos en caso que el cliente quiera comprar.
+
+
+
+const productos =  [
+{ nombre: "Cubiertos", precio: 1500 },
+{ nombre: "kit Ollas ", precio: 2400 },
+{ nombre: "Tazas Porcelana", precio: 400 },
+{ nombre: "Set 4 servilletas", precio: 250 },
+{ nombre: "Tabla estampada", precio: 700 },
+];
+
+let carrito = []
+
+let seleccion = prompt ("Hola desea comprar algun producto SI o NO");
+
+while ( seleccion != "SI" && seleccion != "NO" ){
+
+    alert("por favor ingrese SI o NO")
+    seleccion = prompt ("Hola desea comprar algun producto SI o NO")
+}
+
+if( seleccion == "SI"){
+    alert("A continuacion lista de productos")
+    let todosLosProductos = productos.map(
+        (producto)=> producto.nombre + " " + producto.precio + "$");
+    alert(todosLosProductos.join(" - "))
+} else if ( seleccion == "NO"){
+
+    alert("Gracias por visitarnos!");
+}
+
+while( seleccion !="NO") {
+    let producto = prompt("Agrega un producto a tu carrito")
+    let precio = 0
+
+    if(producto == "Cubiertos" || producto == "kit Ollas" || producto == "Tazas Porcelana" || producto == "Set 4 servilletas" || 
+    producto == "Tabla estampada" ){
+        switch(producto) {
+            case"Cubiertos":
+            precio = 1500; 
+            break;
+            case"kit Ollas":
+            precio = 2400; 
+            break;
+            case"Tazas Porcelana":
+            precio = 400; 
+            break;
+            case"Set 4 servilletas":
+            precio = 250; 
+            break;
+            case"Tabla estampada":
+            precio = 700; 
+            break;
+            default:
+                break;
+        }
+        let unidades = parseInt(prompt("cuantas unidades quiere llevar"))
+
+
+        carrito.push({producto,unidades, precio})
+        console.log(carrito)
+        } else {
+            alert("Ese producto no se encuentra disponible")
+        }
+
+        seleccion = prompt("desa seguir comprando??")
+        while(seleccion === "no"){
+            alert("gracias por la compra! Que lo disfrutes")
+            carrito.forEach((carritoFinal) => {
+                console.log(`producto: ${carritoFinal.producto}, unidades: ${carritoFinal.unidades},total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
+            })
+            break;
+        }
+        }
+
+const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
+console.log(`el total a pagar por su compra es: ${total}`)
+
 
 
 
