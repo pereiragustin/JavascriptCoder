@@ -1,0 +1,261 @@
+
+* {
+    box-sizing: border-box;
+    
+}
+
+
+h1 {
+font-size: 3.5em;
+color: rgb(14, 13, 13);
+font-weight: bold;
+text-shadow: 2px 2px 10px rgb(245, 243, 243);
+
+}
+h2 {
+    font-size: 2,7em;}
+
+h3 {
+    font-size: 2em;}
+
+p { font-size: 1,2em;
+}
+
+ul { list-style: none;}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0%;
+}
+
+button {
+    font-size: 1em;
+border-radius: 10px;
+font-weight: bold;
+padding: 5px 15px;
+border: 2px solid;
+box-shadow: 2px 2px 10px;
+background-color: rgb(85, 85, 219);
+}
+
+button:hover {
+    background-color: rgb(71, 71, 73);
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(23, 23, 27);
+    flex-direction: column;
+    height: 90vh;
+background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.5),
+    rgba(248, 246, 246, 0.5)
+)
+
+,url(./img/becca-tapert-mDOGXiuVb4M-unsplash.jpg);
+background-repeat: no-repeat ;
+background-size: cover;
+background-position: bottom;
+
+
+}
+
+#quienesSomos {
+    background-color: rgb(165, 165, 173);
+}
+
+
+#caracteristicas {
+    background-color: rgb(165, 165, 173);
+}
+
+#aplica-ya {
+    background-color: rgb(77, 77, 90);
+}
+
+footer {
+    text-align: center;
+}
+
+header {
+    background-color: rgb(165, 165, 173);
+    
+}
+
+header .logo {
+ color: rgb(75, 75, 214);
+ font-size: 3.25em;
+ font-weight: 700;
+ 
+    
+    
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+    
+}
+
+header a {
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: black;
+    text-shadow: 2px 2px 10px rgb(245, 243, 243);
+
+
+}
+
+header a:hover {
+    color: rgb(75, 75, 214);
+}
+
+#quienesSomos {
+    text-align: center;
+    margin-bottom: 0%;
+
+
+}
+
+
+#quienesSomos p {
+    color: black;
+    text-shadow: 2px 2px 10px rgb(88, 87, 87);
+font-size: x-large;
+margin: 2%;
+}
+
+#quienesSomos h2 {
+    text-align: center;
+    
+}
+
+span {
+    color: rgb(75, 75, 214);
+ font-size: 1.25em;
+ font-weight: 700;
+}
+
+#caracteristicas .container {
+   text-align: center;
+}
+
+
+/* secciones de cocina dormitorio y jardin */
+
+/*nuestros programas container */
+
+/*nuestro programas*/
+
+
+#secciones {
+    background-color: rgb(165, 165, 173);
+    color: rgb(14, 15, 15);
+    margin-top: 0%;    
+}
+
+#secciones .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#secciones1 {
+    background-color: rgb(165, 165, 173);
+    color: rgb(14, 15, 15);
+    margin-top: 0%;    
+}
+
+#secciones1 .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+#secciones2 {
+    background-color: rgb(165, 165, 173);
+    color: rgb(14, 15, 15);
+    margin-top: 0%;    
+}
+
+#secciones2 .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 100px 0px;
+}
+
+
+
+
+
+
+
+
+
+#secciones h2 {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 300%;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 10px rgb(10, 10, 10);
+
+    }
+
+    #secciones1 h2 {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        font-size: 300%;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        text-shadow: 2px 2px 10px rgb(10, 10, 10);
+    
+        }
+        #secciones2 h2 {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            font-size: 300%;
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-shadow: 2px 2px 10px rgb(10, 10, 10);
+        
+            }
+  
+
+    .card {
+border-radius: 5%;
+        margin: auto;
+        color: black;
+        text-shadow: 2px 2px 10px rgb(88, 87, 87);
+box-shadow: 2px 2px 40px rgb(8, 8, 8);
+    }
+
+.card img {
+    border-radius: 5%;
+}
+

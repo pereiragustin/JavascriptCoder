@@ -2,15 +2,11 @@
 
 // Pedimos nombre de ingreso.
 
-let nombre = prompt("Ingresa tu nombre");;
-
-if (nombre.trim() == "") {
-    alert("no ingresaste nombre de usuario");
+let nombre;
+for(let i = 0;i<3;i++){
+    nombre = prompt ('Ingresá tu nombre');
+    alert('Bienvenid@, '+ nombre);break;
 }
-else {
-    alert("Bienvenido" + nombre);
-}
-
 
 
 // solicitamos cupon de descuento en caso que tenga el codigo, si no tiene el codigo pasamos derecho  a las secciones
@@ -23,7 +19,7 @@ let tieneCupon = confirm("Usted tiene codigo de descuento?")
 if (tieneCupon == true) {
 
     let contador = 0 
-   let cupon =  prompt("Ingrese su codigo de descuento")
+let cupon =  prompt("Ingrese su codigo de descuento")
 
     while (palabraClave != cupon && contador<=3) {
         cupon = prompt("Su codigo no fue aceptado. Ingreselo nuevamente")
@@ -55,18 +51,22 @@ if (opciones == 1) {
 
 
 const productos =  [
-{ nombre: "Cubiertos", precio: 1500 },
+{ nombre: "Kit Servilletas", precio: 250,},
 { nombre: "kit Ollas ", precio: 2400 },
-{ nombre: "Tazas Porcelana", precio: 400 },
-{ nombre: "Set 4 servilletas", precio: 250 },
-{ nombre: "Tabla estampada", precio: 700 },
+{ nombre: "Kit Cubiertos", precio: 450 },
+{ nombre: "Almohadones", precio: 650 },
+{ nombre: "Cama matrimonial", precio: 17000 },
+{ nombre: "Cuadros", precio: 500 },
+{ nombre: "Cierra Circular", precio: 20500 },
+{ nombre: "Kit Jardineria", precio: 3500 },
+{ nombre: "Moto Sierra", precio: 15500 },
 ];
 
 let carrito = []
 
 let seleccion = prompt ("Hola desea comprar algun producto SI o NO");
 
-while ( seleccion != "SI" && seleccion != "NO" ){
+while ( seleccion != "si" && seleccion != "" ){
 
     alert("por favor ingrese SI o NO")
     seleccion = prompt ("Hola desea comprar algun producto SI o NO")
@@ -86,33 +86,46 @@ while( seleccion !="NO") {
     let producto = prompt("Agrega un producto a tu carrito")
     let precio = 0
 
-    if(producto == "Cubiertos" || producto == "kit Ollas" || producto == "Tazas Porcelana" || producto == "Set 4 servilletas" || 
-    producto == "Tabla estampada" ){
+    if(producto == "Kit Servilletas" || producto == "kit Ollas" || producto == "Kit Cubiertos" || producto == "Almohadones" || 
+    producto == "Cama matrimonial" || producto == "Cuadros" || producto == "Cierra Circular" || producto == "Moto Sierra" || producto == "Kit Jardineria" ){
         switch(producto) {
-            case"Cubiertos":
-            precio = 1500; 
+            case"Kit Servilletas":
+            precio = 250; 
             break;
             case"kit Ollas":
             precio = 2400; 
             break;
-            case"Tazas Porcelana":
-            precio = 400; 
-            break;
-            case"Set 4 servilletas":
+            case"Kit Cubiertos":
             precio = 250; 
             break;
-            case"Tabla estampada":
-            precio = 700; 
+            case"Almohadones":
+            precio = 650; 
+            break;
+            case"Cama matrimonial":
+            precio = 17000; 
+                break;
+                case"Cuadros":
+            precio = 500; 
+            break;
+            case"Cierra Circular":
+            precio = 20500; 
+            break;
+            case"Moto Sierra":
+            precio = 20500; 
+            break;
+            case"Kit Jardineria":
+            precio = 3500; 
             break;
             default:
-                break;
         }
+        
         let unidades = parseInt(prompt("cuantas unidades quiere llevar"))
 
 
-        carrito.push({producto,unidades, precio})
+        carrito.push({producto, unidades, precio})
         console.log(carrito)
-        } else {
+        } 
+        else {
             alert("Ese producto no se encuentra disponible")
         }
 
@@ -124,11 +137,20 @@ while( seleccion !="NO") {
             })
             break;
         }
-        }
+     }
 
 const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0)
 console.log(`el total a pagar por su compra es: ${total}`)
 
 
 
+// aplicando a los botones una funcion con dom, NO FUNCIONA
+
+const btnagregarCarrito = document.getElementsByClassName("btn btn-primary"),
+
+function agregarCarrito() {
+    alert("agregado");
+}
+
+btnagregarCarrito.addEventListener('click',agregarCarrito)
 
